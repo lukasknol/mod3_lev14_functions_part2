@@ -1,24 +1,36 @@
-// Writing or "defining" a function
-const makePizza = function() {
-   console.log('Get flower');
-   console.log('Add water and yeast');
-   console.log('Kneed');
-   console.log('Let the dough rise');
-   console.log('Top the pizza');
-   console.log('Bake the pizza');
+// NO ARGUMENT 
+const brush = function () {
+   console.log('The wall has been painted red');
 };
 
-const makeSushi = function() {
-   console.log('Boil the sticky rice');
-   console.log('Chop the fish');
-   console.log('Chop the veggies');
-   console.log('Roll the sushi');
-   console.log('Dip it in the soja');
+brush();
+
+// SINGLE ARGUMENT
+const brush2 = function (color) {
+   console.log("I'm painting the wall " + color);
 };
 
-// Using or "calling" a function
-makeSushi();
-makeSushi();
-makeSushi();
-makePizza();
-makePizza();
+brush2("green");
+brush2("blue");
+
+//MULTIPLE ARGUMENTS
+const brush3 = function (wallSide, color) {
+   console.log("The " + wallSide + " wall has been painted " + color);
+};
+
+brush3("north", "orange");
+brush3("south-east", "grey");
+
+// The order matters
+const brush4 = function (color, wallSide) {
+   console.log("The " + wallSide + " wall has been painted " + color);
+};
+
+brush4("north", "orange");
+
+// Change the order of the arguments
+const brush5 = function(color, wallSide) {
+   console.log("The " + wallSide + " wall has been painted " + color);
+};
+
+brush5("orange", "north");
